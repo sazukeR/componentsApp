@@ -3,9 +3,9 @@ import {AirplaneIcon} from '../../icons/Icons';
 import {globalStyles} from '../theme/theme';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Title} from '../../components/ui/Title';
+import {MenuItem} from '../../components/ui/MenuItem';
 
-export const menuItems = [
-  // 01-animationMenuItems
+export const animationMenuItems = [
   {
     name: 'Animation 101',
     icon: 'cube-outline',
@@ -16,8 +16,9 @@ export const menuItems = [
     icon: 'albums-outline',
     component: 'Animation102Screen',
   },
+];
 
-  // 02-menuItems
+export const menuItems = [
   {
     name: 'Pull to refresh',
     icon: 'refresh-outline',
@@ -48,8 +49,9 @@ export const menuItems = [
     icon: 'flask-outline',
     component: 'ChangeThemeScreen',
   },
+];
 
-  // 03- uiMenuItems
+export const uiMenuItems = [
   {
     name: 'Switches',
     icon: 'toggle-outline',
@@ -74,8 +76,41 @@ export const HomeScreen = () => {
         <ScrollView>
           <Title text="Opciones del menu" safe />
 
-          {menuItems.map(item => (
-            <Text key={item.component}>{item.name}</Text>
+          {animationMenuItems.map((item, index) => (
+            <MenuItem
+              key={item.component}
+              name={item.name}
+              icon={item.icon}
+              component={item.component}
+              isFirst={index === 0}
+              isLast={index === menuItems.length - 1}
+            />
+          ))}
+
+          <View style={{marginTop: 30}} />
+
+          {menuItems.map((item, index) => (
+            <MenuItem
+              key={item.component}
+              name={item.name}
+              icon={item.icon}
+              component={item.component}
+              isFirst={index === 0}
+              isLast={index === menuItems.length - 1}
+            />
+          ))}
+
+          <View style={{marginTop: 30}} />
+
+          {uiMenuItems.map((item, index) => (
+            <MenuItem
+              key={item.component}
+              name={item.name}
+              icon={item.icon}
+              component={item.component}
+              isFirst={index === 0}
+              isLast={index === menuItems.length - 1}
+            />
           ))}
         </ScrollView>
       </View>
