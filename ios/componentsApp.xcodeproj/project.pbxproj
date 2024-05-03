@@ -45,8 +45,9 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-componentsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-componentsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = componentsApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-componentsApp-componentsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-componentsApp-componentsAppTests.release.xcconfig"; path = "Target Support Files/Pods-componentsApp-componentsAppTests/Pods-componentsApp-componentsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A09D1EF52BE577410091138D /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F6583E770180E9753D805D85 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = componentsApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		F6583E770180E9753D805D85 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = componentsApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +122,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				A09D1EF42BE577280091138D /* Fonts */,
 				13B07FAE1A68108700A75B9A /* componentsApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* componentsAppTests */,
@@ -140,6 +142,14 @@
 				00E356EE1AD99517003FC87E /* componentsAppTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A09D1EF42BE577280091138D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A09D1EF52BE577410091138D /* Ionicons.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
