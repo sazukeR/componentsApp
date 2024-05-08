@@ -1,8 +1,10 @@
 import {Alert, Text, View} from 'react-native';
+import prompt from 'react-native-prompt-android';
 import {CustomView} from './CustomView';
 import {Title} from './Title';
 import {globalStyles} from '../../screens/theme/theme';
 import {Button} from './Button';
+import {showPrompt} from '../../../config/adapters/prompt.adapter';
 
 export const AlertScreen = () => {
   const createTwoButtonAlert = () =>
@@ -39,15 +41,49 @@ export const AlertScreen = () => {
       },
     );
 
-  const showPrompt = () => {
-    Alert.prompt(
-      'Correo electronico',
-      'Lorem ipsum dolor sit amet',
-      (valor: string) => console.log({valor}),
-      'secure-text',
-      'Soy el valor por defecto',
-      'number-pad',
-    );
+  const onShowPrompt = () => {
+    showPrompt({
+      title: 'Lorem ipsum',
+      subTitle: 'Lorem ipsum dolor sit amet',
+      buttons: [
+        {
+          text: 'OK',
+          onPress: () => console.log('OK'),
+        },
+      ],
+      placeholder: 'Placeholder',
+    });
+
+    // prompt(
+    //   'Enter password',
+    //   'Enter your password to claim your $1.5B in lottery winnings',
+    //   [
+    //     {
+    //       text: 'Cancel',
+    //       onPress: () => console.log('Cancel Pressed'),
+    //       style: 'cancel',
+    //     },
+    //     {
+    //       text: 'OK',
+    //       onPress: password => console.log('OK Pressed, password: ' + password),
+    //     },
+    //   ],
+    //   {
+    //     type: 'secure-text',
+    //     cancelable: false,
+    //     defaultValue: 'test',
+    //     placeholder: 'placeholder',
+    //   },
+    // );
+
+    // Alert.prompt(
+    //   'Correo electronico',
+    //   'Lorem ipsum dolor sit amet',
+    //   (valor: string) => console.log({valor}),
+    //   'secure-text',
+    //   'Soy el valor por defecto',
+    //   'number-pad',
+    // );
   };
 
   return (
@@ -62,7 +98,7 @@ export const AlertScreen = () => {
 
       <View style={{height: 10}} />
 
-      <Button text="Propmt - Input" onPress={showPrompt} />
+      <Button text="Propmt - Input" onPress={onShowPrompt} />
     </CustomView>
   );
 };
