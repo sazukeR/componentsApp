@@ -1,6 +1,7 @@
 import {Text, View} from 'react-native';
-import {colors, globalStyles} from '../../screens/theme/theme';
+
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import {colors, globalStyles} from '../../screens/theme/theme';
 
 interface Props {
   text: string;
