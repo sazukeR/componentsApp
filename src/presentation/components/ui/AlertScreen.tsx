@@ -2,7 +2,7 @@ import {Alert, Text, View} from 'react-native';
 import prompt from 'react-native-prompt-android';
 import {CustomView} from './CustomView';
 import {Title} from './Title';
-import {globalStyles} from '../../screens/theme/theme';
+import {globalStyles} from '../../../config/theme/theme';
 import {Button} from './Button';
 import {showPrompt} from '../../../config/adapters/prompt.adapter';
 

@@ -1,5 +1,5 @@
 import {Pressable, StyleProp, Text, View, ViewStyle} from 'react-native';
-import {colors, globalStyles} from '../../screens/theme/theme';
+import {colors, globalStyles} from '../../../config/theme/theme';
 
 interface Props {
   text: string;

@@ -1,6 +1,6 @@
 import {Text, View} from 'react-native';
 import {AirplaneIcon} from '../../icons/Icons';
-import {globalStyles} from '../theme/theme';
+import {globalStyles} from '../../../config/theme/theme';
 import {ScrollView} from 'react-native-gesture-handler';
 import {Title} from '../../components/ui/Title';
 import {MenuItem} from '../../components/ui/MenuItem';

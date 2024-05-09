@@ -1,6 +1,6 @@
 import {ReactNode} from 'react';
 import {StyleProp, Text, View, ViewStyle} from 'react-native';
-import {globalStyles} from '../../screens/theme/theme';
+import {globalStyles} from '../../../config/theme/theme';
 
 interface Props {
   style?: StyleProp<ViewStyle>;

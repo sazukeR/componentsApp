@@ -6,7 +6,7 @@ import {
   Animated,
   Easing,
 } from 'react-native';
-import {colors} from '../theme/theme';
+import {colors} from '../../../config/theme/theme';
 
 import {useAnimation} from '../../hooks/useAnimation';
 

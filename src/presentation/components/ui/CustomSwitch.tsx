@@ -1,5 +1,5 @@
 import {Platform, StyleSheet, Switch, Text, View} from 'react-native';
-import {colors} from '../../screens/theme/theme';
+import {colors} from '../../../config/theme/theme';
 
 interface Props {
   isOn: boolean;

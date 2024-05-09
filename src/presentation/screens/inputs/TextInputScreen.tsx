@@ -8,7 +8,7 @@ import {
 import {CustomView} from '../../components/ui/CustomView';
 import {Title} from '../../components/ui/Title';
 import {Card} from '../../components/ui/Card';
-import {globalStyles} from '../theme/theme';
+import {globalStyles} from '../../../config/theme/theme';
 import {useState} from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
 

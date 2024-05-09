@@ -1,5 +1,5 @@
 import {StyleProp, Text, View, ViewStyle} from 'react-native';
-import {colors} from '../../screens/theme/theme';
+import {colors} from '../../../config/theme/theme';
 
 interface Props {
   style?: StyleProp<ViewStyle>;
