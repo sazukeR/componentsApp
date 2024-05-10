@@ -1,15 +1,11 @@
-import {Switch, Text, View} from 'react-native';
+import {useState} from 'react';
 import {CustomView} from '../../components/ui/CustomView';
 import {Card} from '../../components/ui/Card';
-import {Button} from '../../components/ui/Button';
-import {useState} from 'react';
 import {CustomSwitch} from '../../components/ui/CustomSwitch';
 import {Separator} from '../../components/ui/Separator';
+import {Title} from '../../components/ui/Title';
 
 export const SwitchScreen = () => {
-  // const [isEnabled, setIsEnabled] = useState(false);
-  // const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
   const [state, setState] = useState({
     isActive: true,
     isHungry: false,
@@ -17,12 +13,14 @@ export const SwitchScreen = () => {
   });
 
   return (
-    <CustomView style={{marginTop: 100, paddingHorizontal: 10}}>
+    <CustomView style={{paddingHorizontal: 10}}>
+      <Title text="Switches" safe />
+
       <Card>
         <CustomSwitch
           isOn={state.isActive}
           onChange={value => setState({...state, isActive: value})}
-          text="Esta Activo?"
+          text="¿Está activo?"
         />
 
         <Separator />
@@ -30,7 +28,7 @@ export const SwitchScreen = () => {
         <CustomSwitch
           isOn={state.isHungry}
           onChange={value => setState({...state, isHungry: value})}
-          text="Tiene Hambre?"
+          text="¿Tiene hambre?"
         />
 
         <Separator />
@@ -38,15 +36,14 @@ export const SwitchScreen = () => {
         <CustomSwitch
           isOn={state.isHappy}
           onChange={value => setState({...state, isHappy: value})}
-          text="Esta Feliz?"
+          text="¿Es feliz?"
         />
 
-        {/* <Button text="Click Me" onPress={() => {}} /> */}
         {/* 
         <Switch
           trackColor={{false: '#767577', true: '#81b0ff'}}
-          thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-          ios_backgroundColor="#3e3e3e"
+          thumbColor={isEnabled ? '#8316a4' : '#f4f3f4'}
+          ios_backgroundColor="#571818"
           onValueChange={toggleSwitch}
           value={isEnabled}
         /> */}
